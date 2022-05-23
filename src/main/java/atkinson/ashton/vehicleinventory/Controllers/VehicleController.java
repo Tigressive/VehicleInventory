@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 
 @Slf4j
 @RestController
@@ -22,9 +23,13 @@ public class VehicleController {
     @PostMapping()
     @ResponseStatus(code = HttpStatus.CREATED)
     @Transactional(rollbackOn = Exception.class)
-    public void createVehicle(@RequestBody VehicleRequest){
+    public void createVehicle(@RequestBody VehicleRequest vehicleRequest) {
 
-        Vehicle vehicle = new Vehicle();
+        Date date = new Date();
+
+
+        Vehicle vehicle = vehicleRequest.getVehicle(date);
+
 
         vehicleRepository.save(vehicle);
 

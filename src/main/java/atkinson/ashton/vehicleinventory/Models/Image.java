@@ -15,7 +15,7 @@ import javax.persistence.Id;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Images {
+public class Image {
 
 
     @Id

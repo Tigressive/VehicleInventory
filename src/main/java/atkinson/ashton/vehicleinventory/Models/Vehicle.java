@@ -10,7 +10,6 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import atkinson.ashton.vehicleinventory.Models.Images;
 
 
 @Data
@@ -66,7 +65,10 @@ public class Vehicle {
     String trim;
 
     @OneToMany
-    List<Images> imagesList = new ArrayList<>();
+    List<Image> dealerImages = new ArrayList<>();
+
+    @OneToMany
+    List<Image> appraisalImages = new ArrayList<>();
 
     String reconComment;
 
@@ -81,15 +83,6 @@ public class Vehicle {
     String commentFive;
 
 
-
-
-
-
-
-
-
-
-
-
-
+    public Vehicle(Date inDate) {
+    }
 }

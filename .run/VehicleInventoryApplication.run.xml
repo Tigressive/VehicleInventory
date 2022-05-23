@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="VehicleInventoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="VehicleInventory" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="atkinson.ashton.vehicleinventory.VehicleInventoryApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <envs>
+      <env name="SPRING_DATASOURCE_USERNAME" value="aatkinson" />
+      <env name="SPRING_DATASOURCE_PASSWORD" value="test" />
+      <env name="SPRING_DATASOURCE_URL" value="jdbc:mysql://localhost:3306/board?useSSL=false&amp;serverTimezone=UTC&amp;useLegacyDatetimeCode=false&amp;allowPublicKeyRetrieval=true&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;maxReconnects=10" />
+      <env name="REDIS_HOST" value="localhost" />
+      <env name="SERVER_PORT" value="8081"/>
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
