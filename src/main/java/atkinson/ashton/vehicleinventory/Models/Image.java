@@ -6,10 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -24,10 +21,16 @@ public class Image {
     @Column(columnDefinition = "CHAR(32)")
     String id;
 
-    String vehicleId;
+    String fileName;
+
+    @ManyToOne
+    @JoinColumn(name = "vehicle_id")
+    Vehicle vehicle;
+
+    long size;
 
     @Column(nullable = true, length = 64)
-    private String photo;
+    private byte[] imageContent;
 
 
 }
