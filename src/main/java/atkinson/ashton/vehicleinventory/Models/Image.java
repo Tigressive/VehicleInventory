@@ -1,6 +1,8 @@
 package atkinson.ashton.vehicleinventory.Models;
 
 
+import atkinson.ashton.vehicleinventory.View.JsonViews;
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +32,7 @@ public class Image {
     long size;
 
     @Column(nullable = true, length = 64)
+    @JsonView(JsonViews.ImageView.class)
     private byte[] imageContent;
 
 
