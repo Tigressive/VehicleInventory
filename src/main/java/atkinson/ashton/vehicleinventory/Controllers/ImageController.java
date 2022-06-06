@@ -29,7 +29,6 @@ public class ImageController {
     @PostMapping("/appraisalUpload/{vehicleId}")
     public void uploadImage(@RequestParam("image")MultipartFile[] multipartFile, @PathVariable String vehicleId) throws IOException {
 
-
         Vehicle vehicle = vehicleRepository.findVehicleById(vehicleId);
 
         for (MultipartFile multipart: multipartFile) {
@@ -42,9 +41,7 @@ public class ImageController {
             imageRepository.save(image);
         }
 
-
         vehicleRepository.save(vehicle);
-
 
 
     }
@@ -62,14 +59,7 @@ public class ImageController {
 
         }
 
-
-
         return imageContent;
-
-
-
-
-
 
 
     }

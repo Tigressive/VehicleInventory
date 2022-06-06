@@ -36,7 +36,7 @@ public class Vehicle {
 
     String stockNumber;
 
-    float mrsp;
+    float msrp;
 
     float sellingPrice;
 
@@ -83,6 +83,8 @@ public class Vehicle {
     String commentFive;
 
 
-    public Vehicle(Date inDate) {
+
+
+    public Vehicle(String make, String model, String vin, int year, float sellingPrice, float msrp, int mileage) {
     }
 }
